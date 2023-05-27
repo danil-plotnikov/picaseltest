@@ -1,0 +1,141 @@
+.popup{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: 0.4s;
+ opacity: 0;
+ z-index: -5;
+ pointer-events: none;
+ .popup-main{
+  transform: scale(0);
+ }
+ &.show{
+  opacity: 1;
+  z-index: 20;
+  pointer-events: all;
+  .popup-main{
+   transform: scale(1);
+  }
+ }
+ &__bg{
+  background: rgba(47, 47, 47, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+ }
+ &-main{
+  transition: 0.4s;
+  position: relative;
+  z-index: 2;
+  width: 592rem;
+  background: #FFFFFF;
+  border-radius: 40rem;
+  padding: 48rem 40rem;
+  color: #394573;
+ }
+ &__close{
+  position: absolute;
+  top: 32rem;
+  right: 32rem;
+  cursor: pointer;
+  width: 24rem;
+ }
+ &__title{
+  font-weight: 600;
+  font-size: 22rem;
+  line-height: 27rem;
+  margin-bottom: 32rem;
+  text-align: center;
+ }
+ &-form{
+  &__title{
+   font-size: 22rem;
+   margin-bottom: 16rem;
+  }
+  &__pet{
+   display: flex;
+   align-items: center;
+   gap: 0 40rem;
+   margin-bottom: 32rem;
+  }
+  &__label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   input{
+    display: none;
+    &:checked~.popup-form__radio::before{
+     opacity: 1;
+    }
+   }
+   p{
+    font-size: 18rem;
+   }
+  }
+  &__radio{
+   border: 1rem solid #394573;
+   width: 24rem;
+   height: 24rem;
+   border-radius: 50%;
+   position: relative;
+   margin-right: 12rem;
+   &::before{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #394573;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s;
+   }
+  }
+  &__input{
+   font-size: 18rem;
+   color: #394573;
+   display: block;
+   width: 100%;
+   margin-bottom: 24rem;
+   padding: 9rem 0;
+   border: none;
+   border-bottom: 1rem solid #394573;
+   outline: none;
+   font-weight: 600;
+   &::placeholder{
+    color: #394573;
+    opacity: 1;
+    font-weight: 400;
+   }
+  }
+  &__btn{
+   width: 300rem;
+   height: 60rem;
+   background: #394573;
+   border-radius: 40rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   font-weight: 500;
+   font-size: 22rem;
+   color: #fff;
+   transition: 0.4s;
+   margin-top: 48rem;
+   &:hover{
+    opacity: 0.7;
+   }
+  }
+ }
+}

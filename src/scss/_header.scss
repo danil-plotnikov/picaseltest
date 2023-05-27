@@ -1,0 +1,58 @@
+.header{
+ padding: 48rem 0 32rem;
+ z-index: 5;
+ position: relative;
+ background: #fff;
+ .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+ &-menu{
+  display: none;
+ }
+ &-logo{
+  display: flex;
+  align-items: center;
+  &__img{
+   margin-right: 20rem;
+  }
+  &__text{
+   font-weight: 600;
+   font-size: 28rem;
+  }
+ }
+ &-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 40rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__item{
+   font-size: 23rem;
+   font-weight: 500;
+   transition: 0.4s;
+   &:hover{
+    opacity: 0.7;
+   }
+  }
+  &__close{
+   display: none;
+  }
+ }
+ &-socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 28rem;
+  a{
+   width: 40rem;
+   transition: 0.4s;
+   &:hover{
+    opacity: 0.7;
+   }
+  }
+ }
+}
